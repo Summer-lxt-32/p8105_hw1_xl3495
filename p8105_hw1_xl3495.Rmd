@@ -35,3 +35,40 @@ ggsave("scatter_plot.jpeg", plot = plot)
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species))+geom_point()
 ```
 
+# Problem 2
+
+## Create a dataframe
+```{r}
+#library(tidyverse) already loaded
+df = tibble(
+  norm_samp = rnorm(10),
+  vec_logical = norm_samp > 0,
+  vec_char = c("apples",
+               "bananas",
+               "chocolates",
+               "daikon radish",
+               "eggplant",
+               "fudge",
+               "grapes",
+               "honeydew_melon",
+               "ice_cream",
+               "jicama"),
+  vec_factor = factor(c("fruit",
+                        "fruit",
+                        "snack",
+                        "vegetable",
+                        "vegetable",
+                        "snack",
+                        "fruit",
+                        "fruit",
+                        "snack",
+                        "vegetable"
+                        ))
+)
+
+```
+The dataframe looks like:
+```{r echo = FALSE}
+df
+```
+
