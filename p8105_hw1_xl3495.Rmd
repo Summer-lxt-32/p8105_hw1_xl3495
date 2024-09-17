@@ -4,3 +4,13 @@ output: github_document
 author: "Xueting Li"
 ---
 
+## Load dataset and the necessary library
+```{r eval = FALSE}
+data("penguins", package = "palmerpenguins")
+library(tidyverse)
+```
+```{r, eval = FALSE, echo = FALSE}
+data("penguins", package = "palmerpenguins")
+library(tidyverse)
+```
+
