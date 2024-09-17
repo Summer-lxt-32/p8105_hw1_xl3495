@@ -23,3 +23,15 @@ mean_flipper_length = mean(flipper_length,na.rm = TRUE)
 
 The `penguins` dataset has 8 variables in total and the size of the dataset is `r row * col` (_nrow_:`r row`; _ncol_:`r col`). The variables basically describes features of penguins such as `species`(Adélie, Chinstrap and Gentoo), `body_mass`, `sex`(male/female) and `year`. Also, variables like `bill_length_mm` and `bill_depth_mm` describes the bill length and depth in millimeters separately. The variable `flipper_length_mm` is an integer denoting flipper length in millimeters, with `r mean_flipper_length`mm in average.
 
+## The scatterplot of `flipper_length_mm (y)` vs `bill_length_mm (x)`:
+
+```{r warning = FALSE}
+#create a scatteplot
+plot = ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species))+geom_point()
+# Save as a JPEG
+ggsave("scatter_plot.jpeg", plot = plot)
+```
+```{r echo = FALSE,warning = FALSE}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species))+geom_point()
+```
+
