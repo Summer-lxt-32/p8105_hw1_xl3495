@@ -1,0 +1,6 @@
+---
+title: "p8105_hw1_xl3495"
+output: github_document
+author: "Xueting Li"
+---
+
