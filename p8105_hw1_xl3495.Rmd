@@ -4,13 +4,22 @@ output: github_document
 author: "Xueting Li"
 ---
 
+# Problem 1
 ## Load dataset and the necessary library
-```{r eval = FALSE}
+```{r}
 data("penguins", package = "palmerpenguins")
 library(tidyverse)
 ```
-```{r, eval = FALSE, echo = FALSE}
-data("penguins", package = "palmerpenguins")
-library(tidyverse)
+
+
+## Dataset description
+
+```{r}
+row = nrow(penguins)
+col = ncol(penguins)
+flipper_length = penguins %>% pull(flipper_length_mm)
+mean_flipper_length = mean(flipper_length,na.rm = TRUE)
 ```
+
+The `penguins` dataset has 8 variables in total and the size of the dataset is `r row * col` (_nrow_:`r row`; _ncol_:`r col`). The variables basically describes features of penguins such as `species`(Adélie, Chinstrap and Gentoo), `body_mass`, `sex`(male/female) and `year`. Also, variables like `bill_length_mm` and `bill_depth_mm` describes the bill length and depth in millimeters separately. The variable `flipper_length_mm` is an integer denoting flipper length in millimeters, with `r mean_flipper_length`mm in average.
 
